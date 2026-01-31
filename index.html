@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uponor Interactive Manual - Vario S Manifold</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- LEFT SIDEBAR: Navigation -->
+        <aside class="sidebar-left">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <img src="GF_Logo.png" alt="Company Logo" class="logo-image">
+                </div>
+                <div class="theme-toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="theme-label" id="theme-label">Light</span>
+                </div>
+            </div>
+
+            <!-- New Language Selector Container -->
+            <div id="language-selector-container"></div>
+
+            <!-- Added Progress Bar -->
+            <div class="completion-progress-container">
+                <div class="progress-label">
+                    <span data-i18n="label_progress">Progress</span>
+                    <span id="progress-text">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="overall-progress-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <div class="sidebar-title" data-i18n="installation_process">Installation Process</div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li class="nav-item active" data-step="2">
+                        <img src="Dimensions.svg" alt="Dimensions" class="nav-icon-img">
+                        <span class="step-label" data-i18n="nav_dimensions">Dimensions</span>
+                    </li>
+                    <li class="nav-item" data-step="3">
+                        <img src="puzzle_mounting.svg" alt="Installation" class="nav-icon-img">
+                        <span class="step-label" data-i18n="nav_installation">Installation</span>
+                    </li>
+                    <li class="nav-item" data-step="4">
+                        <img src="Flushing.svg" alt="Flushing" class="nav-icon-img">
+                        <span class="step-label" data-i18n="nav_flushing">Flushing</span>
+                    </li>
+                    <li class="nav-item" data-step="5">
+                        <img src="Pressure test.svg" alt="Pressure test" class="nav-icon-img">
+                        <span class="step-label" data-i18n="nav_pressure">Pressure test</span>
+                    </li>
+                    <li class="nav-item" data-step="6">
+                        <img src="operation.svg" alt="Operation" class="nav-icon-img">
+                        <span class="step-label" data-i18n="nav_operation">Operation</span>
+                    </li>
+                    <li class="nav-item" data-step="">
+                        <img src="Notes.svg" alt="Notes" class="nav-icon-img">
+                        <span class="step-label" data-i18n="nav_notes">Notes</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- CENTER STAGE: Visual/GIF Area -->
+        <main class="main-content">
+            <!-- Video Player UI Container -->
+            <div class="video-player-container">
+                <div class="video-wrapper" id="visual-container">
+                    <video id="main-video" width="100%" height="100%" playsinline poster="">
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Placeholder content overlay if video fails or acts as poster -->
+                    <div class="play-overlay" id="play-overlay">
+                        <div class="play-btn">▶</div>
+                    </div>
+                </div>
+
+                <!-- Custom Video Controls -->
+                <div class="video-controls">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <div class="controls-row">
+                        <div class="left-controls">
+                            <button class="control-btn play">▶</button>
+                            <button class="control-btn volume">🔊</button>
+                            <span class="time-display">0:00 / 6:30</span>
+                        </div>
+                        <div class="right-controls">
+                            <button class="control-btn settings">⚙</button>
+                            <button class="control-btn maximize">⛶</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT SIDEBAR: Tools -->
+            <div class="step-info">
+                <h2 id="current-step-title">Table of Content</h2>
+                <p class="step-description" id="current-step-desc">Review the cutting table specifications before
+                    proceeding.</p>
+            </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR: Tools -->
+        <aside class="sidebar-right">
+            <!-- Top Section: Checklist -->
+            <section class="tool-section checklist-section">
+                <h3 data-i18n="sidebar_checklist"><span class="icon">✓</span> Checklist</h3>
+                <div class="checklist-container" id="checklist-container">
+                    <!-- Checklist items will be injected via JS -->
+                </div>
+            </section>
+
+            <!-- Bottom Section: Technical Specs -->
+            <section class="tool-section specs-section">
+                <div class="specs-content" id="specs-container">
+                    <!-- Specs items will be injected via JS -->
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
